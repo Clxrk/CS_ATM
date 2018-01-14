@@ -10,18 +10,22 @@ namespace CS_Bankautomat
     class Konto
     {
         float balance;
-        string temp;
 
-        public Konto(float balance)
+        public Konto(float balance)                                     // Overloaded Constructor to set balance to 0
         {
             this.balance = balance;
         }
 
-        public float GetBalance()
+        public string GetFilePath(string file)                          // Overloaded Method to get the file / path
         {
-            string path = @"balance.txt";
-            string read = File.ReadAllText(path);
-            return float.Parse(read);
+            const string path = @"";                                    // Const var of the path
+            return Path.Combine(path, file);                            // C:\Debug\1111.txt
+        }
+
+        public string GetBalance(string path)                           // Overloaded Method to read the balance of the file
+        {
+            string read = File.ReadAllText(path);                       // Reads the file 1111.txt
+            return read;                                                // Returns content
         }
     }
 }

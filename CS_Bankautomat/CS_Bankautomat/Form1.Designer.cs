@@ -69,10 +69,19 @@
             this.btKontostand = new System.Windows.Forms.Button();
             this.txtKontostand = new System.Windows.Forms.TextBox();
             this.tabAdmin = new System.Windows.Forms.TabPage();
+            this.listUsers = new System.Windows.Forms.ListBox();
+            this.btDelete = new System.Windows.Forms.Button();
+            this.txtDelete = new System.Windows.Forms.TextBox();
+            this.lblDelete = new System.Windows.Forms.Label();
+            this.lblCreate = new System.Windows.Forms.Label();
+            this.txtCreate = new System.Windows.Forms.TextBox();
+            this.btCreate = new System.Windows.Forms.Button();
+            this.lblAccounts = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabLogin.SuspendLayout();
             this.tabLogout.SuspendLayout();
             this.tabMain.SuspendLayout();
+            this.tabAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -105,11 +114,11 @@
             // 
             this.lblWrong.AutoSize = true;
             this.lblWrong.ForeColor = System.Drawing.Color.Red;
-            this.lblWrong.Location = new System.Drawing.Point(115, 152);
+            this.lblWrong.Location = new System.Drawing.Point(70, 151);
             this.lblWrong.Name = "lblWrong";
-            this.lblWrong.Size = new System.Drawing.Size(63, 13);
+            this.lblWrong.Size = new System.Drawing.Size(159, 13);
             this.lblWrong.TabIndex = 3;
-            this.lblWrong.Text = "Wrong PIN!";
+            this.lblWrong.Text = "Wrong PIN or user doesn\'t exist!";
             this.lblWrong.Visible = false;
             // 
             // btLogin
@@ -139,6 +148,7 @@
             this.txtPin.Size = new System.Drawing.Size(110, 20);
             this.txtPin.TabIndex = 0;
             this.txtPin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPin_KeyDown);
+            this.txtPin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPin_KeyPress);
             // 
             // tabLogout
             // 
@@ -406,6 +416,7 @@
             this.txtWithdraw.Name = "txtWithdraw";
             this.txtWithdraw.Size = new System.Drawing.Size(75, 20);
             this.txtWithdraw.TabIndex = 7;
+            this.txtWithdraw.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWithdraw_KeyPress);
             // 
             // lblWithdraw
             // 
@@ -432,6 +443,7 @@
             this.txtDeposit.Name = "txtDeposit";
             this.txtDeposit.Size = new System.Drawing.Size(75, 20);
             this.txtDeposit.TabIndex = 4;
+            this.txtDeposit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDeposit_KeyPress);
             // 
             // lblDeposit
             // 
@@ -477,12 +489,91 @@
             // 
             // tabAdmin
             // 
+            this.tabAdmin.Controls.Add(this.lblAccounts);
+            this.tabAdmin.Controls.Add(this.listUsers);
+            this.tabAdmin.Controls.Add(this.btDelete);
+            this.tabAdmin.Controls.Add(this.txtDelete);
+            this.tabAdmin.Controls.Add(this.lblDelete);
+            this.tabAdmin.Controls.Add(this.lblCreate);
+            this.tabAdmin.Controls.Add(this.txtCreate);
+            this.tabAdmin.Controls.Add(this.btCreate);
             this.tabAdmin.Location = new System.Drawing.Point(4, 22);
             this.tabAdmin.Name = "tabAdmin";
             this.tabAdmin.Size = new System.Drawing.Size(298, 262);
             this.tabAdmin.TabIndex = 3;
             this.tabAdmin.Text = "Admin";
             this.tabAdmin.UseVisualStyleBackColor = true;
+            // 
+            // listUsers
+            // 
+            this.listUsers.FormattingEnabled = true;
+            this.listUsers.Location = new System.Drawing.Point(8, 120);
+            this.listUsers.Name = "listUsers";
+            this.listUsers.Size = new System.Drawing.Size(279, 134);
+            this.listUsers.TabIndex = 6;
+            // 
+            // btDelete
+            // 
+            this.btDelete.Location = new System.Drawing.Point(109, 53);
+            this.btDelete.Name = "btDelete";
+            this.btDelete.Size = new System.Drawing.Size(75, 23);
+            this.btDelete.TabIndex = 5;
+            this.btDelete.Text = "Ok";
+            this.btDelete.UseVisualStyleBackColor = true;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
+            // 
+            // txtDelete
+            // 
+            this.txtDelete.Location = new System.Drawing.Point(109, 27);
+            this.txtDelete.Name = "txtDelete";
+            this.txtDelete.Size = new System.Drawing.Size(75, 20);
+            this.txtDelete.TabIndex = 4;
+            this.txtDelete.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDelete_KeyPress);
+            // 
+            // lblDelete
+            // 
+            this.lblDelete.AutoSize = true;
+            this.lblDelete.Location = new System.Drawing.Point(106, 11);
+            this.lblDelete.Name = "lblDelete";
+            this.lblDelete.Size = new System.Drawing.Size(66, 13);
+            this.lblDelete.TabIndex = 3;
+            this.lblDelete.Text = "Delete User:";
+            // 
+            // lblCreate
+            // 
+            this.lblCreate.AutoSize = true;
+            this.lblCreate.Location = new System.Drawing.Point(8, 11);
+            this.lblCreate.Name = "lblCreate";
+            this.lblCreate.Size = new System.Drawing.Size(66, 13);
+            this.lblCreate.TabIndex = 2;
+            this.lblCreate.Text = "Create User:";
+            // 
+            // txtCreate
+            // 
+            this.txtCreate.Location = new System.Drawing.Point(8, 27);
+            this.txtCreate.Name = "txtCreate";
+            this.txtCreate.Size = new System.Drawing.Size(75, 20);
+            this.txtCreate.TabIndex = 1;
+            this.txtCreate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCreate_KeyPress);
+            // 
+            // btCreate
+            // 
+            this.btCreate.Location = new System.Drawing.Point(8, 53);
+            this.btCreate.Name = "btCreate";
+            this.btCreate.Size = new System.Drawing.Size(75, 23);
+            this.btCreate.TabIndex = 0;
+            this.btCreate.Text = "Ok";
+            this.btCreate.UseVisualStyleBackColor = true;
+            this.btCreate.Click += new System.EventHandler(this.btCreate_Click);
+            // 
+            // lblAccounts
+            // 
+            this.lblAccounts.AutoSize = true;
+            this.lblAccounts.Location = new System.Drawing.Point(5, 104);
+            this.lblAccounts.Name = "lblAccounts";
+            this.lblAccounts.Size = new System.Drawing.Size(101, 13);
+            this.lblAccounts.TabIndex = 7;
+            this.lblAccounts.Text = "Available Accounts:";
             // 
             // Form1
             // 
@@ -503,6 +594,8 @@
             this.tabLogout.PerformLayout();
             this.tabMain.ResumeLayout(false);
             this.tabMain.PerformLayout();
+            this.tabAdmin.ResumeLayout(false);
+            this.tabAdmin.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -549,6 +642,14 @@
         private System.Windows.Forms.Label lblUpdate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabAdmin;
+        private System.Windows.Forms.Label lblCreate;
+        private System.Windows.Forms.TextBox txtCreate;
+        private System.Windows.Forms.Button btCreate;
+        private System.Windows.Forms.Button btDelete;
+        private System.Windows.Forms.TextBox txtDelete;
+        private System.Windows.Forms.Label lblDelete;
+        private System.Windows.Forms.ListBox listUsers;
+        private System.Windows.Forms.Label lblAccounts;
     }
 }
 

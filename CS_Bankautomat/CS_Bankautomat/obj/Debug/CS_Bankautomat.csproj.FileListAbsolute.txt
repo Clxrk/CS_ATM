@@ -8,3 +8,13 @@ C:\Users\Clark\source\repos\CS_Bankautomat\CS_Bankautomat\bin\Debug\CS_Bankautom
 C:\Users\Clark\source\repos\CS_Bankautomat\CS_Bankautomat\obj\Debug\CS_Bankautomat.exe
 C:\Users\Clark\source\repos\CS_Bankautomat\CS_Bankautomat\obj\Debug\CS_Bankautomat.pdb
 C:\Users\Clark\source\repos\CS_Bankautomat\CS_Bankautomat\obj\Debug\CS_Bankautomat.Form1.resources
+C:\Users\Clark\Documents\GitHub\CS_ATM\CS_Bankautomat\CS_Bankautomat\bin\Debug\CS_Bankautomat.exe.config
+C:\Users\Clark\Documents\GitHub\CS_ATM\CS_Bankautomat\CS_Bankautomat\bin\Debug\CS_Bankautomat.exe
+C:\Users\Clark\Documents\GitHub\CS_ATM\CS_Bankautomat\CS_Bankautomat\bin\Debug\CS_Bankautomat.pdb
+C:\Users\Clark\Documents\GitHub\CS_ATM\CS_Bankautomat\CS_Bankautomat\obj\Debug\CS_Bankautomat.csprojResolveAssemblyReference.cache
+C:\Users\Clark\Documents\GitHub\CS_ATM\CS_Bankautomat\CS_Bankautomat\obj\Debug\CS_Bankautomat.Form1.resources
+C:\Users\Clark\Documents\GitHub\CS_ATM\CS_Bankautomat\CS_Bankautomat\obj\Debug\CS_Bankautomat.Properties.Resources.resources
+C:\Users\Clark\Documents\GitHub\CS_ATM\CS_Bankautomat\CS_Bankautomat\obj\Debug\CS_Bankautomat.csproj.GenerateResource.Cache
+C:\Users\Clark\Documents\GitHub\CS_ATM\CS_Bankautomat\CS_Bankautomat\obj\Debug\CS_Bankautomat.csproj.CoreCompileInputs.cache
+C:\Users\Clark\Documents\GitHub\CS_ATM\CS_Bankautomat\CS_Bankautomat\obj\Debug\CS_Bankautomat.exe
+C:\Users\Clark\Documents\GitHub\CS_ATM\CS_Bankautomat\CS_Bankautomat\obj\Debug\CS_Bankautomat.pdb
